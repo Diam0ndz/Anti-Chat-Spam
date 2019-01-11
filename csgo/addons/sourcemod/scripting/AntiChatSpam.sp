@@ -34,7 +34,7 @@ public Action Event_OnPlayerChat(Event event, const char[] name, bool dontBroadc
 		}
 	}
 
-	char message[3072];
+	char message[250];
 	event.GetString("text", message, sizeof(message));
 
 	int time = GetTime();
