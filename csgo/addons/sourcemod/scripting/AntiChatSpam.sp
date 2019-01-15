@@ -40,7 +40,7 @@ public Action Event_OnPlayerChat(Event event, const char[] name, bool dontBroadc
 	int time = GetTime();
 	if(time - lastUsedCommand[client] < chatCooldown.IntValue)
 	{
-		PrintToChat(client, " \x04You are sending messages too fast! Please wait \x02%i \x04second(s) before sending another message.", chatCooldown.IntValue - (time - lastUsedCommand[client]));
+		PrintToChat(client, " \x01[\x0CSkynetGaming\x01] \x0FYou are sending messages too fast! Please wait \x10%i \x0Fsecond(s) before sending another message.", chatCooldown.IntValue - (time - lastUsedCommand[client]));
 		return Plugin_Handled;
 	}else
 	{
